@@ -15,15 +15,17 @@ namespace Ducks\Component\SplTypes;
  * SplEnum gives the ability to emulate and create enumeration objects natively in PHP.
  *
  * @see SplEnum http://php.net/manual/en/class.splenum.php
+ *
+ * @psalm-api
  */
 abstract class SplEnum extends SplType
 {
     /**
      * {@inheritdoc}
      */
-    public function __construct($initial_value = null, $strict = true)
+    public function __construct($initial_value = null, bool $strict = true)
     {
-        if ($initial_value === null) {
+        if (null === $initial_value) {
             $initial_value = static::__default;
         }
         $class = new \ReflectionClass($this);
@@ -37,9 +39,10 @@ abstract class SplEnum extends SplType
      * Returns all consts (possible values) as an array.
      *
      * @param bool $include_default Whether to include __default property.
-     * @return array
+     *
+     * @return array<mixed, mixed>
      */
-    final public function getConstList($include_default = false)
+    final public function getConstList(bool $include_default = false)
     {
         $class = new \ReflectionClass($this);
         $constants = $class->getConstants();

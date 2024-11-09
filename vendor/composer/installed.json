@@ -1,24 +1,89 @@
 {
     "packages": [
         {
-            "name": "ducks-project/spl-types",
-            "version": "v1.2.0",
-            "version_normalized": "1.2.0.0",
+            "name": "devdavido/lighthouse",
+            "version": "dev-master",
+            "version_normalized": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/ducks-project/spl-types.git",
-                "reference": "57fbd86788341f0d026c29f368058414f809870f"
+                "url": "https://github.com/DevDavido/lighthouse-php.git",
+                "reference": "91ddfe4126453d3c9cb4c8263a5238967fbdf9ac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ducks-project/spl-types/zipball/57fbd86788341f0d026c29f368058414f809870f",
-                "reference": "57fbd86788341f0d026c29f368058414f809870f",
+                "url": "https://api.github.com/repos/DevDavido/lighthouse-php/zipball/91ddfe4126453d3c9cb4c8263a5238967fbdf9ac",
+                "reference": "91ddfe4126453d3c9cb4c8263a5238967fbdf9ac",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=7.2.5",
+                "symfony/process": "^5.4"
             },
-            "time": "2020-11-25T11:28:05+00:00",
+            "require-dev": {
+                "phpunit/phpunit": "^6.1|^7.0"
+            },
+            "time": "2024-11-09T15:13:34+00:00",
+            "default-branch": true,
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "DevDavido\\Lighthouse\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "DevDavido\\Lighthouse\\Test\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "DevDavido",
+                    "homepage": "https://github.com/DevDavido"
+                }
+            ],
+            "description": "Interface for the Google Lighthouse project",
+            "homepage": "https://github.com/DevDavido/lighthouse-php",
+            "keywords": [
+                "lighthouse"
+            ],
+            "support": {
+                "source": "https://github.com/DevDavido/lighthouse-php/tree/master"
+            },
+            "install-path": "../devdavido/lighthouse"
+        },
+        {
+            "name": "ducks-project/spl-types",
+            "version": "v5.0.0",
+            "version_normalized": "5.0.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ducks-project/spl-types.git",
+                "reference": "15093fc875ddd8bb1e14d009445b7e7fafa1a42e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ducks-project/spl-types/zipball/15093fc875ddd8bb1e14d009445b7e7fafa1a42e",
+                "reference": "15093fc875ddd8bb1e14d009445b7e7fafa1a42e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "atoum/atoum": "^4.0||^4.1||^4.2",
+                "atoum/stubs": "^2.6",
+                "friendsofphp/php-cs-fixer": "^2.19||^3.64",
+                "phpbench/phpbench": "^1.1||^1.2",
+                "phpstan/phpstan": "^1.12",
+                "phpunit/phpunit": "^8.5||^9.6||^10.5||^11.3",
+                "squizlabs/php_codesniffer": "^3.10",
+                "vimeo/psalm": "^4.30||5.26"
+            },
+            "time": "2024-09-18T20:41:37+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -64,7 +129,7 @@
             "support": {
                 "email": "adrien.loyant@gmail.com",
                 "issues": "https://github.com/ducks-project/spl-types/issues",
-                "source": "https://github.com/ducks-project/spl-types/tree/v1.2.0"
+                "source": "https://github.com/ducks-project/spl-types/tree/v5.0.0"
             },
             "funding": [
                 {
@@ -79,69 +144,22 @@
             "install-path": "../ducks-project/spl-types"
         },
         {
-            "name": "jeroen-g/lighthouse",
-            "version": "v0.2",
-            "version_normalized": "0.2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Jeroen-G/lighthouse-php.git",
-                "reference": "9cabb6a857b1a9ccc537328956b4e0af2c370f9a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Jeroen-G/lighthouse-php/zipball/9cabb6a857b1a9ccc537328956b4e0af2c370f9a",
-                "reference": "9cabb6a857b1a9ccc537328956b4e0af2c370f9a",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5",
-                "symfony/process": "^4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^6.1|^7.0"
-            },
-            "time": "2019-01-25T12:14:39+00:00",
-            "type": "library",
-            "installation-source": "dist",
-            "autoload": {
-                "psr-4": {
-                    "Dzava\\Lighthouse\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dimitris Zavantias",
-                    "email": "dzavantias@gmail.com"
-                }
-            ],
-            "description": "Interface for the Google Lighthouse project",
-            "homepage": "https://github.com/dzava/lighthouse-php",
-            "keywords": [
-                "lighthouse"
-            ],
-            "install-path": "../jeroen-g/lighthouse"
-        },
-        {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.28.0",
-            "version_normalized": "1.28.0.0",
+            "version": "v1.31.0",
+            "version_normalized": "1.31.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "42292d99c55abe617799667f454222c54c60e229"
+                "reference": "85181ba99b2345b0ef10ce42ecac37612d9fd341"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/42292d99c55abe617799667f454222c54c60e229",
-                "reference": "42292d99c55abe617799667f454222c54c60e229",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/85181ba99b2345b0ef10ce42ecac37612d9fd341",
+                "reference": "85181ba99b2345b0ef10ce42ecac37612d9fd341",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "provide": {
                 "ext-mbstring": "*"
@@ -149,12 +167,9 @@
             "suggest": {
                 "ext-mbstring": "For best performance"
             },
-            "time": "2023-07-28T09:04:16+00:00",
+            "time": "2024-09-09T11:45:10+00:00",
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
                 "thanks": {
                     "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
@@ -193,7 +208,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.28.0"
+                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.31.0"
             },
             "funding": [
                 {
@@ -213,28 +228,25 @@
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.28.0",
-            "version_normalized": "1.28.0.0",
+            "version": "v1.31.0",
+            "version_normalized": "1.31.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5"
+                "reference": "60328e362d4c2c802a54fcbf04f9d3fb892b4cf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
-                "reference": "6caa57379c4aec19c0a12a38b59b26487dcfe4b5",
+                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/60328e362d4c2c802a54fcbf04f9d3fb892b4cf8",
+                "reference": "60328e362d4c2c802a54fcbf04f9d3fb892b4cf8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
-            "time": "2023-01-26T09:26:14+00:00",
+            "time": "2024-09-09T11:45:10+00:00",
             "type": "library",
             "extra": {
-                "branch-alias": {
-                    "dev-main": "1.28-dev"
-                },
                 "thanks": {
                     "name": "symfony/polyfill",
                     "url": "https://github.com/symfony/polyfill"
@@ -279,7 +291,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.28.0"
+                "source": "https://github.com/symfony/polyfill-php80/tree/v1.31.0"
             },
             "funding": [
                 {
@@ -299,24 +311,24 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.4.44",
-            "version_normalized": "4.4.44.0",
+            "version": "v5.4.46",
+            "version_normalized": "5.4.46.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "5cee9cdc4f7805e2699d9fd66991a0e6df8252a2"
+                "reference": "01906871cb9b5e3cf872863b91aba4ec9767daf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/5cee9cdc4f7805e2699d9fd66991a0e6df8252a2",
-                "reference": "5cee9cdc4f7805e2699d9fd66991a0e6df8252a2",
+                "url": "https://api.github.com/repos/symfony/process/zipball/01906871cb9b5e3cf872863b91aba4ec9767daf4",
+                "reference": "01906871cb9b5e3cf872863b91aba4ec9767daf4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1.3",
+                "php": ">=7.2.5",
                 "symfony/polyfill-php80": "^1.16"
             },
-            "time": "2022-06-27T13:16:42+00:00",
+            "time": "2024-11-06T09:18:28+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -344,7 +356,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v4.4.44"
+                "source": "https://github.com/symfony/process/tree/v5.4.46"
             },
             "funding": [
                 {

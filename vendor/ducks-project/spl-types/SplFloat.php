@@ -15,21 +15,21 @@ namespace Ducks\Component\SplTypes;
  * The SplFloat class is used to enforce strong typing of the float type.
  *
  * @see http://php.net/manual/en/class.splfloat.php
+ *
+ * @psalm-api
  */
 class SplFloat extends SplType
 {
     /**
      * @var float
-     *
-     * @codingStandardsIgnoreStart
      */
-    const __default = 0;
-    // @codingStandardsIgnoreEnd
+    // phpcs:ignore Generic.NamingConventions.UpperCaseConstantName.ClassConstantNotUpperCase
+    public const __default = 0.0;
 
     /**
      * {@inheritdoc}
      */
-    public function __construct($initial_value = self::__default, $strict = true)
+    public function __construct($initial_value = self::__default, bool $strict = true)
     {
         parent::__construct($initial_value, $strict);
         if (!$strict) {

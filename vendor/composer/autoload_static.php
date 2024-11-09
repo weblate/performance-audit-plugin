@@ -21,8 +21,8 @@ class ComposerStaticInit98dde460e8a16c8877d8f8d8a8e6921c
         ),
         'D' => 
         array (
-            'Dzava\\Lighthouse\\' => 17,
             'Ducks\\Component\\SplTypes\\' => 25,
+            'DevDavido\\Lighthouse\\' => 21,
         ),
     );
 
@@ -39,13 +39,13 @@ class ComposerStaticInit98dde460e8a16c8877d8f8d8a8e6921c
         array (
             0 => __DIR__ . '/..' . '/symfony/process',
         ),
-        'Dzava\\Lighthouse\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/jeroen-g/lighthouse/src',
-        ),
         'Ducks\\Component\\SplTypes\\' => 
         array (
             0 => __DIR__ . '/..' . '/ducks-project/spl-types',
+        ),
+        'DevDavido\\Lighthouse\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/devdavido/lighthouse/src',
         ),
     );
 
@@ -55,17 +55,17 @@ class ComposerStaticInit98dde460e8a16c8877d8f8d8a8e6921c
         'Composer\\Autoload\\ClassLoader' => __DIR__ . '/..' . '/composer/ClassLoader.php',
         'Composer\\Autoload\\ComposerStaticInit98dde460e8a16c8877d8f8d8a8e6921c' => __DIR__ . '/..' . '/composer/autoload_static.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'DevDavido\\Lighthouse\\Exceptions\\AuditFailedException' => __DIR__ . '/..' . '/devdavido/lighthouse/src/Exceptions/AuditFailedException.php',
+        'DevDavido\\Lighthouse\\Lighthouse' => __DIR__ . '/..' . '/devdavido/lighthouse/src/Lighthouse.php',
+        'DevDavido\\Lighthouse\\Tests\\Integration\\LighthouseTest' => __DIR__ . '/..' . '/devdavido/lighthouse/tests/Integration/LighthouseTest.php',
+        'DevDavido\\Lighthouse\\Tests\\Unit\\LighthouseTest' => __DIR__ . '/..' . '/devdavido/lighthouse/tests/Unit/LighthouseTest.php',
+        'DevDavido\\Lighthouse\\Tests\\Unit\\MockLighthouse' => __DIR__ . '/..' . '/devdavido/lighthouse/tests/Unit/LighthouseTest.php',
         'Ducks\\Component\\SplTypes\\SplBool' => __DIR__ . '/..' . '/ducks-project/spl-types/SplBool.php',
         'Ducks\\Component\\SplTypes\\SplEnum' => __DIR__ . '/..' . '/ducks-project/spl-types/SplEnum.php',
         'Ducks\\Component\\SplTypes\\SplFloat' => __DIR__ . '/..' . '/ducks-project/spl-types/SplFloat.php',
         'Ducks\\Component\\SplTypes\\SplInt' => __DIR__ . '/..' . '/ducks-project/spl-types/SplInt.php',
         'Ducks\\Component\\SplTypes\\SplString' => __DIR__ . '/..' . '/ducks-project/spl-types/SplString.php',
         'Ducks\\Component\\SplTypes\\SplType' => __DIR__ . '/..' . '/ducks-project/spl-types/SplType.php',
-        'Dzava\\Lighthouse\\Exceptions\\AuditFailedException' => __DIR__ . '/..' . '/jeroen-g/lighthouse/src/Exceptions/AuditFailedException.php',
-        'Dzava\\Lighthouse\\Lighthouse' => __DIR__ . '/..' . '/jeroen-g/lighthouse/src/Lighthouse.php',
-        'Dzava\\Lighthouse\\Tests\\Integration\\LighthouseTest' => __DIR__ . '/..' . '/jeroen-g/lighthouse/tests/Integration/LighthouseTest.php',
-        'Dzava\\Lighthouse\\Tests\\Unit\\LighthouseTest' => __DIR__ . '/..' . '/jeroen-g/lighthouse/tests/Unit/LighthouseTest.php',
-        'Dzava\\Lighthouse\\Tests\\Unit\\MockLighthouse' => __DIR__ . '/..' . '/jeroen-g/lighthouse/tests/Unit/LighthouseTest.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'Piwik\\Plugins\\PerformanceAudit\\API' => __DIR__ . '/../..' . '/API.php',
         'Piwik\\Plugins\\PerformanceAudit\\Archiver' => __DIR__ . '/../..' . '/Archiver.php',
@@ -122,7 +122,7 @@ class ComposerStaticInit98dde460e8a16c8877d8f8d8a8e6921c
         'Piwik\\Plugins\\PerformanceAudit\\Tasks' => __DIR__ . '/../..' . '/Tasks.php',
         'Piwik\\Plugins\\PerformanceAudit\\Updates_1_1_0' => __DIR__ . '/../..' . '/Updates/1.1.0.php',
         'Piwik\\Plugins\\PerformanceAudit\\tests\\Integration\\ApiTest' => __DIR__ . '/../..' . '/tests/Integration/ApiTest.php',
-        'Piwik\\Plugins\\PerformanceAudit\\tests\\Integration\\PerformanceAuditIntegrationTest' => __DIR__ . '/../..' . '/tests/Integration/PerformanceAuditIntegrationTest.php',
+        'Piwik\\Plugins\\PerformanceAudit\\tests\\Integration\\PerformanceAuditIntegrationPreparation' => __DIR__ . '/../..' . '/tests/Integration/PerformanceAuditIntegrationPreparation.php',
         'Piwik\\Plugins\\PerformanceAudit\\tests\\Unit\\Filter\\AuditScoreClassifierTest' => __DIR__ . '/../..' . '/tests/Unit/Filter/AuditScoreClassifierTest.php',
         'Piwik\\Plugins\\PerformanceAudit\\tests\\Unit\\Metric\\PercentTest' => __DIR__ . '/../..' . '/tests/Unit/Metric/PercentTest.php',
         'Piwik\\Plugins\\PerformanceAudit\\tests\\Unit\\Metric\\SecondsTest' => __DIR__ . '/../..' . '/tests/Unit/Metric/SecondsTest.php',

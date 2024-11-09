@@ -15,21 +15,21 @@ namespace Ducks\Component\SplTypes;
  * The SplInt class is used to enforce strong typing of the integer type.
  *
  * @see SplInt http://php.net/manual/en/class.splint.php
+ *
+ * @psalm-api
  */
 class SplInt extends SplType
 {
     /**
      * @var int
-     *
-     * @codingStandardsIgnoreStart
      */
-    const __default = 0;
-    // @codingStandardsIgnoreEnd
+    // phpcs:ignore Generic.NamingConventions.UpperCaseConstantName.ClassConstantNotUpperCase
+    public const __default = 0;
 
     /**
      * {@inheritdoc}
      */
-    public function __construct($initial_value = self::__default, $strict = true)
+    public function __construct($initial_value = self::__default, bool $strict = true)
     {
         parent::__construct($initial_value, $strict);
         if (!$strict) {

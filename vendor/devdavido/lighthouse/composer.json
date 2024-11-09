@@ -1,32 +1,32 @@
 {
-    "name": "jeroen-g/lighthouse",
+    "name": "devdavido/lighthouse",
     "description": "Interface for the Google Lighthouse project",
     "keywords": [
         "lighthouse"
     ],
-    "homepage": "https://github.com/dzava/lighthouse-php",
+    "homepage": "https://github.com/DevDavido/lighthouse-php",
     "license": "MIT",
     "authors": [
         {
-            "name": "Dimitris Zavantias",
-            "email": "dzavantias@gmail.com"
+            "name": "DevDavido",
+            "homepage": "https://github.com/DevDavido"
         }
     ],
     "require": {
-		"php": ">=5.5",
-        "symfony/process": "^4.0"
+		"php": ">=7.2.5",
+        "symfony/process": "^5.4"
     },
 	"require-dev": {
 		"phpunit/phpunit": "^6.1|^7.0"
     },
 	"autoload": {
         "psr-4": {
-            "Dzava\\Lighthouse\\": "src/"
+            "DevDavido\\Lighthouse\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Dzava\\Lighthouse\\Test\\": "tests/"
+            "DevDavido\\Lighthouse\\Test\\": "tests/"
         }
     }
 }

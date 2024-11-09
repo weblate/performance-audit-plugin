@@ -1,8 +1,8 @@
 <?php
 
-namespace Dzava\Lighthouse;
+namespace DevDavido\Lighthouse;
 
-use Dzava\Lighthouse\Exceptions\AuditFailedException;
+use DevDavido\Lighthouse\Exceptions\AuditFailedException;
 use Symfony\Component\Process\Process;
 
 class Lighthouse
@@ -38,7 +38,6 @@ class Lighthouse
         $process->setTimeout($this->timeout)->run();
 
         if (!$process->isSuccessful()) {
-            dump($process->getErrorOutput());
             throw new AuditFailedException($url, $process->getErrorOutput());
         }
 
@@ -302,7 +301,7 @@ class Lighthouse
             $url,
         ], $this->processOptions());
 
-        return implode(' ', array_filter($command));
+        return array_values(array_filter($command));
     }
 
     /**

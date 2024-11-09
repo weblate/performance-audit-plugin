@@ -17,7 +17,17 @@
         "email": "adrien.loyant@gmail.com"
     },
     "require": {
-        "php": ">=5.3.3"
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "atoum/atoum": "^4.0||^4.1||^4.2",
+        "atoum/stubs": "^2.6",
+        "friendsofphp/php-cs-fixer": "^2.19||^3.64",
+        "phpbench/phpbench": "^1.1||^1.2",
+        "phpstan/phpstan": "^1.12",
+        "phpunit/phpunit": "^8.5||^9.6||^10.5||^11.3",
+        "squizlabs/php_codesniffer": "^3.10",
+        "vimeo/psalm": "^4.30||5.26"
     },
     "autoload": {
         "psr-4": {
@@ -29,5 +39,17 @@
         "exclude-from-classmap": [
             "/Tests/"
         ]
+    },
+    "scripts": {
+        "test": [
+            "@unittest",
+            "@atoumtest"
+        ],
+        "unittest": "XDEBUG_MODE=coverage ./vendor/bin/phpunit Tests/phpunit -c phpunit.xml.dist",
+        "atoumtest": "XDEBUG_MODE=coverage ./vendor/bin/atoum -d Tests/atoum",
+        "bench": "./vendor/bin/phpbench run Tests/benchmark/ --report=default"
+    },
+    "scripts-descriptions": {
+        "test": "Run all tests!"
     }
 }

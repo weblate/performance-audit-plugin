@@ -25,6 +25,9 @@
 # Idea
 .idea/*
 
+# vscode
+*.code-workspace
+
 # Swap & temp files
 *~
 *.tmp
@@ -43,4 +46,5 @@ local.properties
 .vagrant/
 /test
 /tests
+/.history
 .DS_Store
