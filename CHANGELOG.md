@@ -1,4 +1,8 @@
 # Changelog
+## 3.2.0
+- Security: Bumped `symfony/process` dependency to a version without security vulnerabilities (affects Windows servers only)
+- Updated: All composer dependencies to their latest supported versions for PHP >= 7.2.5 (same as Matomo 5 itself)
+
 ## 3.1.0
 - Added: Search for Node executable additionally in paths of `PATH` environment variable
 - Improved: Provide directory search path in error message if executable cannot be found
