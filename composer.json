@@ -12,10 +12,10 @@
         "php": ">=7.2.5",
         "ext-json": "*",
         "ext-spl": "*",
-        "ducks-project/spl-types": "^1.2",
-        "symfony/polyfill-mbstring": "^1.28",
-        "symfony/process": "^4.4",
-        "jeroen-g/lighthouse": "^0.2"
+        "ducks-project/spl-types": "^5.0",
+        "symfony/polyfill-mbstring": "^1.31",
+        "symfony/process": "^5.4",
+        "devdavido/lighthouse": "dev-master#91ddfe4126453d3c9cb4c8263a5238967fbdf9ac"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^2.19"
@@ -37,5 +37,11 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/devdavido/lighthouse-php"
+        }
+    ]
 }

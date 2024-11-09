@@ -4,7 +4,7 @@ namespace Piwik\Plugins\PerformanceAudit;
 
 require PIWIK_INCLUDE_PATH . '/plugins/PerformanceAudit/vendor/autoload.php';
 
-use Dzava\Lighthouse\Lighthouse as BaseLighthouse;
+use DevDavido\Lighthouse\Lighthouse as BaseLighthouse;
 use Piwik\Plugins\PerformanceAudit\Exceptions\AuditFailedAuthoriseRefusedException;
 use Piwik\Plugins\PerformanceAudit\Exceptions\AuditFailedException;
 use Piwik\Plugins\PerformanceAudit\Exceptions\AuditFailedMethodNotAllowedException;

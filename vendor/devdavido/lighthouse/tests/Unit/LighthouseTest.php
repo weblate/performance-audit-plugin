@@ -1,8 +1,8 @@
 <?php
 
-namespace Dzava\Lighthouse\Tests\Unit;
+namespace DevDavido\Lighthouse\Tests\Unit;
 
-use Dzava\Lighthouse\Lighthouse;
+use DevDavido\Lighthouse\Lighthouse;
 use PHPUnit\Framework\TestCase;
 
 class LighthouseTest extends TestCase
@@ -24,14 +24,14 @@ class LighthouseTest extends TestCase
             ->withConfig('/my/config')
             ->getCommand('http://example.com');
 
-        $this->assertEquals(implode(' ', [
+        $this->assertEquals([
             'lighthouse',
             '--output=json',
             '--quiet',
             "--config-path=/my/config",
             "http://example.com",
             "--chrome-flags='--headless --disable-gpu --no-sandbox'",
-        ]), $command);
+        ], $command);
     }
 
     /** @test */
@@ -73,7 +73,8 @@ class LighthouseTest extends TestCase
 
         $command = $this->lighthouse->getCommand('http://example.com');
 
-        $this->assertContains("CHROME_PATH=/chrome lighthouse", $command);
+        $this->assertContains("CHROME_PATH=/chrome", $command);
+        $this->assertContains("lighthouse", $command);
     }
 
     /** @test */
@@ -150,13 +151,11 @@ class LighthouseTest extends TestCase
 
         $this->lighthouse->setOutput('/tmp/report.md', ['html', 'json']);
         $command = $this->lighthouse->getCommand('http://example.com');
-        $this->assertContains("--output=html", $command);
-        $this->assertContains("--output=json", $command);
+        $this->assertContains("--output=json --output=html", $command);
 
         $this->lighthouse->setOutput('/tmp/report.md', ['html', 'json', 'md']);
         $command = $this->lighthouse->getCommand('http://example.com');
-        $this->assertContains("--output=html", $command);
-        $this->assertContains("--output=json", $command);
+        $this->assertContains("--output=json --output=html", $command);
         $this->assertNotContains("--output=md", $command);
     }
 
@@ -212,7 +211,7 @@ class LighthouseTest extends TestCase
         $lighthouse = new MockLighthouse();
 
         $lighthouse->setHeaders(['Cookie' => 'monster=blue']);
-        $this->assertContains('--extra-headers', $lighthouse->getCommand(''));
+        $this->assertContains('--extra-headers "{\"Cookie\":\"monster=blue\"}"', $lighthouse->getCommand(''));
 
         $lighthouse->setHeaders([]);
         $this->assertNotContains('--extra-headers', $lighthouse->getCommand(''));

@@ -1,9 +1,9 @@
 <?php
 
-namespace Dzava\Lighthouse\Tests\Integration;
+namespace DevDavido\Lighthouse\Tests\Integration;
 
-use Dzava\Lighthouse\Exceptions\AuditFailedException;
-use Dzava\Lighthouse\Lighthouse;
+use DevDavido\Lighthouse\Exceptions\AuditFailedException;
+use DevDavido\Lighthouse\Lighthouse;
 use PHPUnit\Framework\TestCase;
 
 class LighthouseTest extends TestCase

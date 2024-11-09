@@ -15,20 +15,23 @@ namespace Ducks\Component\SplTypes;
  * Parent class for all SPL types.
  *
  * @see SplType http://php.net/manual/en/class.spltype.php
+ *
+ * @psalm-api
  */
 abstract class SplType
 {
     /**
      * Default value.
-     *
-     * @codingStandardsIgnoreStart
      */
-    const __default = null;
-    // @codingStandardsIgnoreEnd
+    // phpcs:ignore Generic.NamingConventions.UpperCaseConstantName.ClassConstantNotUpperCase
+    public const __default = null;
 
     /**
-     * Internal enum value
+     * Internal enum value.
+     *
+     * @var mixed
      */
+    // phpcs:ignore PSR2.Classes.PropertyDeclaration.Underscore
     public $__default;
 
     /**
@@ -36,20 +39,20 @@ abstract class SplType
      *
      * @param mixed $initial_value Type and default value depends on the extension class.
      * @param bool $strict Whether to set the object's sctrictness.
+     *
      * @return void
      *
      * @throws \UnexpectedValueException if incompatible type is given.
      *
-     * @codingStandardsIgnoreStart
+     * @phpstan-ignore-next-line
      */
-    public function __construct($initial_value = self::__default, $strict = true)
+    public function __construct($initial_value = self::__default, bool $strict = true)
     {
-        if ($initial_value === null) {
+        if (null === $initial_value) {
             $initial_value = static::__default;
         }
         $this->__default = $initial_value;
     }
-    // @codingStandardsIgnoreEnd
 
     /**
      * Stringify object.
@@ -64,20 +67,25 @@ abstract class SplType
     /**
      * Export object.
      *
+     * @param array<mixed, mixed> $properties
+     *
      * @return SplType
      */
-    final public static function __set_state($properties)
+    final public static function __set_state(array $properties)
     {
+        // @phpstan-ignore-next-line
         return new static($properties['__default']);
     }
 
     /**
      * Dumping object (php > 5.6.0).
      *
-     * @return array
+     * @return array<mixed, mixed>
      */
     final public function __debugInfo()
     {
-        return array('__default' => $this->__default);
+        return [
+            '__default' => $this->__default,
+        ];
     }
 }
