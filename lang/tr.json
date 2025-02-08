@@ -57,7 +57,7 @@
         "Settings_EmulatedDevice_Help": "Ne tür bir ortam başarımı denetiminin yapılması ve ölçülmesi gerektiğini seçin.",
         "Settings_EmulatedDevice_Title": "Başarım benzetimi ortamı",
         "Settings_ExtraHttpHeaderKey_Authorization": "Kimlik doğrulama",
-        "Settings_ExtraHttpHeaderKey_Cookie": "Çerez",
+        "Settings_ExtraHttpHeaderKey_Cookie": "Tanımlama bilgisi",
         "Settings_ExtraHttpHeaderKey_Help": "Özel HTTP üst bilgi anahtarınızı seçin.",
         "Settings_ExtraHttpHeaderKey_Title": "Özel HTTP üst bilgi anahtarı",
         "Settings_ExtraHttpHeaderValue_Help": "Özel HTTP üst bilgi değerinizi ayarlayın.",
