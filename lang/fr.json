@@ -66,6 +66,7 @@
         "Settings_HasExtendedTimeout_Title": "Augmenter le délai d'attente pour les audits de performance",
         "Settings_HasExtraHttpHeader_Help": "Si vous souhaitez ajouter un en-tête HTTP personnalisé à chaque demande d'audit de performance, par exemple pour l'authentification HTTP de base, activez ce paramètre.",
         "Settings_HasExtraHttpHeader_Title": "Utiliser l'en-tête HTTP personnalisé pour les audits de performance",
+        "Settings_HasGroupedUrlsByAnchor_Title": "Regrouper les URLs pour les audits de performance qui ne diffèrent que par leurs ancres",
         "Settings_HasGroupedUrls_Help": "Si vous activez ce paramètre, les URL qui ont le même chemin d'accès mais qui diffèrent dans leur <a href=\"https://en.wikipedia.org/wiki/Query_string\" target=\"_blank\">chaîne de requête</a> seront regroupées pour les audits, ainsi une seule de ces URL sera auditée, toutes les autres URL régulières ne sont pas affectées par ce paramètre. Si beaucoup de vos URL ne diffèrent que par leur chaîne de requête, l'activation de ce paramètre peut accélérer le temps nécessaire à l'audit de performance global d'un site.",
         "Settings_HasGroupedUrls_Title": "Regroupez les URL pour les audits de performance qui ne diffèrent que par leur chaîne de requête",
         "Settings_IsEnabled_Help": "Vous pouvez décider, pour chaque site web, si les audits de performance du site sont finalement réalisés.",
