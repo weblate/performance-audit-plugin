@@ -32,7 +32,7 @@
         "PluginCheckStartButton": "Eklenti denetimini başlat",
         "PluginCheckStartButtonClicked": "Eklenti denetimi başlatıldı. Lütfen 5 dakika kadar bekleyin…",
         "Report_CumulativeLayoutShift_Documentation_Information": "birikimli görünüm kayması",
-        "Report_Documentation": "Bu rapor, bir %2$s ortamındaki her sayfa için %1$s hakkında bilgiler içerir. Puanın nasıl hesaplandığını öğrenmek için <a href=\"https://web.dev/%3$s/\" target=\"_blank\">%4$s</a> Google sayfasına bakabilirsiniz.",
+        "Report_Documentation": "Bu rapor, bir %2$s ortamındaki her sayfa%1$s ile ilgili bilgiler içerir. Puanın nasıl hesaplandığını öğrenmek için <a href=\"https://web.dev/%3$s/\" target=\"_blank\">%4$s</a> Google sayfasına bakabilirsiniz.",
         "Report_FirstContentfulPaint_Documentation_Information": "ilk içeriksel boyama",
         "Report_Header_CumulativeLayoutShift_Desktop": "Masaüstü birikimli görünüm kayması",
         "Report_Header_CumulativeLayoutShift_Mobile": "Mobil birikimli görünüm kayması",
